@@ -1,0 +1,175 @@
+/* Fondo del preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Contenedor de letras */
+.letters {
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo de neón */
+.neon-text span {
+    font-size: 55px;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(35px);
+    animation: showLetter 0.5s forwards, neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow:
+            0 0 3px #00cfff,
+            0 0 6px #00cfff,
+            0 0 8px #009dff;
+    }
+    to {
+        text-shadow:
+            0 0 5px #00eaff,
+            0 0 12px #00eaff,
+            0 0 18px #00baff;
+    }
+}
+
+.pre-text {
+    margin-top: 5px;
+    opacity: 0;
+    animation: showText 0.8s forwards;
+    animation-delay: 1.3s;
+}
+
+.pre-text p {
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: 0 0 6px #00aaff;
+    font-weight: 500;
+}
+
+@keyframes showText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación secuencial de letras */
+.letters span:nth-child(1){animation-delay:0.1s;}
+.letters span:nth-child(2){animation-delay:0.2s;}
+.letters span:nth-child(3){animation-delay:0.3s;}
+.letters span:nth-child(4){animation-delay:0.4s;}
+.letters span:nth-child(5){animation-delay:0.5s;}
+.letters span:nth-child(6){animation-delay:0.6s;}
+.letters span:nth-child(7){animation-delay:0.7s;}
+.letters span:nth-child(8){animation-delay:0.8s;}
+.letters span:nth-child(9){animation-delay:0.9s;}
+.letters span:nth-child(10){animation-delay:1s;}
+
+/* Animación de entrada */
+@keyframes showLetter {
+    0% { opacity: 0; transform: translateY(35px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Barra de carga neón */
+.loader-bar {
+    margin-top: 30px;
+    width: 280px;
+    height: 7px;
+    background: rgba(0, 160, 255, 0.25);
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 0 12px #00aaff;
+}
+
+.neon-bar .bar {
+    width: 0%;
+    height: 100%;
+    background: #bef2ff;
+    animation: loadingBar 3s forwards, neonBarGlow 1.5s infinite alternate;
+}
+
+@keyframes neonBarGlow {
+    from { box-shadow: 0 0 10px #00baff; }
+    to { box-shadow: 0 0 25px #00eaff; }
+}
+
+@keyframes loadingBar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Fade out del preloader */
+.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+@media (max-width: 480px) {
+    .neon-text span {
+        gap: 6px;
+    }
+
+    .letters {
+        gap: 6px;
+    }
+
+    .pre-text p {
+        font-size: 20px;  
+    }
+
+    .loader-bar {
+        width: 180px;        
+    }
+}
+
+@media (max-width: 768px) {
+    .neon-text span {
+        font-size: 40px;
+    }
+
+    .pre-text p {
+        font-size: 22px;
+    }
+
+    .loader-bar {
+        width: 220px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .neon-text span {
+        font-size: 48px;
+    }
+
+    .loader-bar {
+        width: 240px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .neon-text span {
+        font-size: 70px;     
+    }
+
+    .pre-text p {
+        font-size: 32px;
+    }
+
+    .loader-bar {
+        width: 330px;
+    }
+}

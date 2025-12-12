@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velzard</title>
+    <link rel="website icon" type="jpeg" href="img/velzardlogo.jpeg">
+    <link rel="stylesheet" href="styles/bienvenida.css">
+    <link rel="stylesheet" href="styles/styleweb.css">
+</head>
+<body>
+    <!-- pantalla de bienvenida a la pagina -->
+    <div id="preloader">
+        <div class="letters neon-text">
+            <span>B</span>
+            <span>I</span>
+            <span>E</span>
+            <span>N</span>
+            <span>V</span>
+            <span>E</span>
+            <span>N</span>
+            <span>I</span>
+            <span>D</span>
+            <span>O</span>
+        </div>
+
+        <div class="pre-text">
+            <p>A Velzard</p>
+        </div>
+
+        <div class="loader-bar neon-bar">
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- aqui todo el contenido de la pagina -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/velzardlogo.jpeg" alt="Velzard">
+            <span>Velzard</span>
+        </div>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- LINKS -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre nosotros</a></li>
+            <li><a href="#porta">Portafolios</a></li>
+            <li><a href="#trabajos">Proyectos de Velzard</a></li>
+            <li><a href="#tecn">Mantenimiento Tecnico</a></li>
+            <li><a href="#contacts">Contactos</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main  id="sobre" class="hero">
+        <div class="contenido">
+            <h2>Sobre nosotros</h2>
+            <p>Somos Velzard una empresa de desarrollo de aplicativos web, convertimos sus ideas en soluciones modernas y efectivas.
+             Nos encargarmos 3 <a href="#porta">programadores</a> experimentados en el desarrollo web. 
+             Si quiere un desarrollo profesional, rápido y a la medida, contáctenos y llevemos su proyecto más lejos.</p>
+        </div>
+    </main>
+
+    <!--Seccion de portafolios personales-->
+    <section id="porta">
+        <div class="container">
+            <h2>Portafolios</h2>
+            <p>Conoce más de nosotros</p>
+            <div class="grid-portafolio">
+                <div class="portafolio">
+                    <img src="/img/portajean.png" alt="porta-img">
+                    <p>Portafolio de Jean Paul</p>
+                    <a href="https://jpaulss.github.io/portafolioWeb/">Visitar portafolio</a>
+                </div>
+            
+                <div class="portafolio">
+                    <img src="" alt="">
+                    <p>Portafolio de Jhonatan</p>
+                    <a href="">Visitar portafolio</a>
+                </div>
+                
+                <div class="portafolio">
+                    <img src="" alt="">
+                    <p>Portafolio de Andres</p>
+                    <a href="">Visitar portafolio</a>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <!--Seccion para agregar los proyecto qur haga Velzard-->
+    <section id="trabajos">
+        <div class="container">
+            <h2>Proyectos de Velzard</h2>
+            <div class="grid-proyectos">
+                <div class="proyecto">
+                    <div class="proyecto-img">🍔</div>
+                    <a href="">Visitar proyecto</a>
+                    <p>Proyecto desarrollado en: html, css y js</p>
+                </div> <!--Aca finaliza el proyecto-->
+
+                <div class="proyecto">
+                    <div class="proyecto-img">🍔</div>
+                    <a href="">Visitar proyecto</a>
+                    <p>Proyecto desarrollado en:</p>
+                </div>
+            </div> <!--Aca finaliza el grid-->
+
+        </div> <!--Aca finaliza el container-->
+    </section>
+
+
+    <section id="tecn">
+        <h2>Mantenimiento Tecnicos</h2>
+        <img src="" alt="pagina-jhona">
+        <a href="">Visitar pagina</a>
+        <p>En proceso de lanzamiento</p>
+    </section>
+
+    <section id="contacts">
+        <div class="container">
+            <h2>Contactos</h2>
+            <p>¿Interesado en trabajar con nosotros? ¡No dudes en contactarme!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h3>Telefono</h3>
+                    <p>3186244937</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <h3>Gmail</h3>
+                    <p>velzard@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🐙</div>
+                    <h3>GitHub</h3>
+                    <p>github.com/Velzardd</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+         <p>©2025 Velzard — Todos los derechos reservados</p>
+    </footer>
+
+<div id="assistant-container">
+    <div id="assistant-bubble" class="hidden">
+        <p id="assistant-text"></p>
+    </div>
+    <img src="img/velzardchibi-icon.webp" alt="Asistente Velzard" id="assistant-icon">
+</div>
+
+    <script src="bienvenida.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
